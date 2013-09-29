@@ -1,0 +1,48 @@
+<Alloy>
+	<TabGroup>
+
+        <!--- Settings tab --->
+
+		<Tab title="Settings" icon="KS_nav_ui.png">
+			<Window title="Settings">
+				<Label top="20" left="0">Player 1 name</Label>
+                <Button top="20" right="0" onClick="changePlayer1Name">Change</Button>
+				<Label top="40" left="0" id="player1_name" class="info"></Label>
+				<Label top="120" left="0">Player 2 name</Label>
+                <Button top="120" right="0" onClick="changePlayer2Name">Change</Button>
+				<Label top="140" left="0" id="player2_name" class="info"></Label>
+
+                <Label top="200" left="0">Pounctuation</Label>
+
+				<OptionDialog onClick="pounctuationDialogClick" id="pounctuationOptions" title="Pounctuation" cancel="3">
+				    <Options>
+        				<Option>7</Option>
+                        <Option>11</Option>
+                        <Option>21</Option>
+                        <Option>Cancel</Option>
+                    </Options>
+
+                    <ButtonNames>
+                        <ButtonName>Select</ButtonName>
+                        <ButtonName>Cancel</ButtonName>
+                    </ButtonNames>
+                </OptionDialog>
+
+                <Button top="200" right="0" onClick="showPounctuationOptions">Change</Button>
+                <Label top="240" left="0" id="pounctuation" class="info">21</Label>
+
+			</Window>
+		</Tab>
+
+		<!--- Pounctuation tab --->
+
+		<Tab title="Count" icon="KS_nav_views.png">
+			<Window title="Count">
+				<Button id="player1wins" top="0" left="0" width="100%" height="20%" onClick="player1wins">Player 1 wins point</Button>
+				<Label id="player1_count" top="100" left="0" align="right" width="100%" class="point">0</Label>
+                <Button id="player2wins" top="200" left="0"  width="100%" height="20%" onClick="player2wins">Player 2 wins point</Button>
+                <Label id="player2_count" top="300" left="0" align="right" width="100%" class="point">0</Label>
+			</Window>
+		</Tab>
+	</TabGroup>
+</Alloy>
